@@ -1,0 +1,3 @@
+# React useState: Silent Object Mutation Bug
+
+This repository demonstrates a common, yet subtle bug in React applications involving the `useState` hook and object updates. Directly modifying object properties within the state update function doesn't trigger a re-render, resulting in a stale UI.  This is because JavaScript objects are passed by reference. The solution involves creating a copy of the object before modifying it and then updating the state with the new object.
